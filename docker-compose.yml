@@ -1,18 +1,23 @@
-version: "3.9"
-
+version: '3'
 services:
-  flask-backend:
-    build: ./backend
-    container_name: flask-backend
-    ports:
-      - "5000:5000"
-    env_file:
-      - ./backend/.env
-
-  express-frontend:
+  frontend:
     build: ./frontend
-    container_name: express-frontend
+    image: devil2112/frontend-app
     ports:
       - "3000:3000"
     depends_on:
-      - flask-backend
+      - backend
+    networks:
+      - app-network
+
+  backend:
+    build: ./backend
+    image: devil2112/backend-app
+    ports:
+      - "5000:5000"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
