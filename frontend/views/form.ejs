@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Submit To-Do</title>
+</head>
+<body>
+  <h1>Submit a To-Do Item</h1>
+  <form action="/submit" method="POST">
+    <label>Item Name:</label><br>
+    <input type="text" name="itemName" required><br><br>
+
+    <label>Item Description:</label><br>
+    <textarea name="itemDescription" required></textarea><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>

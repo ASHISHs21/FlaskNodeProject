@@ -1,0 +1,71 @@
+# ------------------------
+# Global ignores
+# ------------------------
+*.log
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.swp
+.DS_Store
+.env
+.vscode/
+.idea/
+*.bak
+node_modules/
+.vscode/
+__pycache__/
+.env
+
+# ------------------------
+# Node.js (Frontend)
+# ------------------------
+frontend/node_modules/
+frontend/npm-debug.log
+frontend/package-lock.json
+
+# If using build tools like webpack or vite
+frontend/dist/
+frontend/build/
+
+# ------------------------
+# Python (Flask Backend)
+# ------------------------
+backend/__pycache__/
+backend/*.pyc
+backend/env/
+backend/venv/
+backend/.env
+backend/.pytest_cache/
+backend/.mypy_cache/
+
+# ------------------------
+# Docker and VSCode
+# ------------------------
+*.pid
+*.seed
+*.pid.lock
+.dockerignore
+.docker-compose.override.yml
+docker-compose.override.yml
+
+# ------------------------
+# OS generated files
+# ------------------------
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ------------------------
+# Miscellaneous
+# ------------------------
+*.sqlite3
+*.db
+*.bak
+*.tmp
+*.log
+*.zip
+*.tar
+*.tar.gz
+*.tgz

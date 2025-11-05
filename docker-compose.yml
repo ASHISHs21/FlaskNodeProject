@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  flask-backend:
+    build: ./backend
+    container_name: flask-backend
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./backend/.env
+
+  express-frontend:
+    build: ./frontend
+    container_name: express-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - flask-backend
